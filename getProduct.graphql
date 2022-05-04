@@ -1,0 +1,56 @@
+query myProducts{
+  products(
+    search: "M", 
+    pageSize: 12, 
+    currentPage: 2,
+  ) {
+    total_count
+    items {
+      sku
+      name 
+      related_products {
+        sku
+      }
+      price_range {
+        maximum_price {
+          discount {
+            amount_off
+            percent_off
+          }
+          final_price {
+            currency
+            value
+          }
+          fixed_product_taxes {
+            label
+          }
+          regular_price {
+            currency
+            value
+          }
+        }
+        minimum_price {
+          discount {
+            amount_off
+            percent_off
+          }
+          final_price {
+            currency
+            value
+          }
+          fixed_product_taxes {
+            label
+          }
+          regular_price {
+            currency
+            value
+          }
+        }
+      } 
+    } 
+    page_info {
+      page_size
+      current_page
+    }
+  }
+}

@@ -1,0 +1,27 @@
+query IntrospectionQuery {
+  __type(name: "ProductAttributeFilterInput") {
+    name
+    kind
+    description
+    inputFields {
+      name
+      description
+      defaultValue
+    }
+    fields {
+      name
+      args {
+        name
+        description
+        type {
+          kind
+          name
+        }
+      }
+      type {
+        kind
+        name
+      }
+    }
+  }
+}

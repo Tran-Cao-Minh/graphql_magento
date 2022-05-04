@@ -1,0 +1,33 @@
+{
+  categoryList(filters: {ids: {eq: "2"}}) {
+    name
+    level
+    products(
+      sort: {
+        price: ASC
+      }
+      pageSize: 2
+      currentPage: 1
+    ) {
+      total_count
+      items {
+        name
+        sku
+#         price_range {
+#           minimum_price {
+#             discount {
+#               amount_off
+#               percent_off
+#             }
+#             final_price {
+#               value
+#             }
+#             regular_price {
+#               value
+#             }
+#           }
+#         }
+      }
+    }
+  }
+}
