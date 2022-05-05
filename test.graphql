@@ -1,0 +1,6 @@
+subscription getPersonsRealtime {
+  newPerson {
+    name
+    age
+  }
+}
